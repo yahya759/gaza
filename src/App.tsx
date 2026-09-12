@@ -45,8 +45,8 @@ export default function App() {
       dir="rtl"
       className="relative min-h-screen w-full bg-[#f6f5f0] text-[#111111] overflow-x-hidden selection:bg-[#CE1126] selection:text-white flex flex-col"
     >
-      {/* Halftone Dot-Grain Texture Overlay across whole page */}
-      <HalftoneOverlay />
+      {/* Halftone Dot-Grain Texture Overlay across whole page — disabled for testing */}
+      {/* <HalftoneOverlay /> */}
 
       {/* SECTION 1: HERO SECTION (Paper-white palette, pixel-faithful layout) */}
       <div 
