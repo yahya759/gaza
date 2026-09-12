@@ -1,0 +1,6 @@
+{
+  "name": "خليك عون لأهل غزة",
+  "description": "حملة إغاثة وتبرع عاجلة لأهل غزة - غزة بتنزف وانت تقدر توقف نزيفها بـ 5$",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

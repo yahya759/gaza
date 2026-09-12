@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-family: 'Alexandria', 'Cairo', sans-serif;
+    background-color: #f6f5f0;
+    color: #111111;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Cairo', 'Alexandria', sans-serif;
+  }
+}
+
+/* Halftone grain effect */
+.halftone-overlay {
+  background-image: radial-gradient(#111111 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+.noise-bg {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* Duotone image filter for black and red Palestinian flag red #CE1126 */
+.duotone-red-filter {
+  filter: contrast(140%) brightness(95%);
+}
