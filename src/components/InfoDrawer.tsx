@@ -1,8 +1,8 @@
 import React from 'react';
-import { X, Heart, ShieldCheck, Mail, Sparkles } from 'lucide-react';
+import { X, Mail, Sparkles } from 'lucide-react';
 
 interface InfoDrawerProps {
-  type: 'story' | 'impact' | 'contact' | null;
+  type: 'impact' | 'contact' | null;
   onClose: () => void;
   onOpenDonate: () => void;
 }
@@ -23,20 +23,6 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ type, onClose, onOpenDon
         >
           <X className="w-4 h-4" />
         </button>
-
-        {type === 'story' && (
-          <div>
-            <div className="w-10 h-10 rounded-full bg-[#007A3D]/10 text-[#007A3D] flex items-center justify-center mb-3">
-              <Heart className="w-5 h-5" />
-            </div>
-            <h3 className="font-['Cairo'] font-extrabold text-xl text-[#111111] mb-2">
-              قصتنا — نداء إنساني عاجل
-            </h3>
-            <p className="text-sm text-[#444444] leading-relaxed mb-4">
-              انطلقت هذه المبادرة الإغاثية المستقلة لمواجهة الكارثة الإنسانية المتفاقمة في قطاع غزة. في ظل الحصار وانقطاع التحويلات البنكية التقليدية، نوفر قنوات دعم رقمية مباشرة وآمنة 100% تصل إلى المتطوعين الميدانيين وفرق المخابز والمطابخ الخيرية لشراء وتوزيع الإمدادات فوراً.
-            </p>
-          </div>
-        )}
 
         {type === 'impact' && (
           <div>

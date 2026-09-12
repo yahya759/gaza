@@ -4,6 +4,7 @@ import { HeroContent } from './components/HeroContent';
 import { RescueHandsIllustration } from './components/RescueHandsIllustration';
 import { BottomStrip } from './components/BottomStrip';
 import { HalftoneOverlay } from './components/HalftoneOverlay';
+import { OurStorySection } from './components/OurStorySection';
 import { ThreeDoorsSection } from './components/ThreeDoorsSection';
 import { CinematicMomentSection } from './components/CinematicMomentSection';
 import { LiveImpactSection } from './components/LiveImpactSection';
@@ -14,7 +15,7 @@ export default function App() {
   const [isDonateOpen, setIsDonateOpen] = useState(false);
   const [selectedCause, setSelectedCause] = useState<string | undefined>(undefined);
   const [selectedAmount, setSelectedAmount] = useState<number>(5);
-  const [infoType, setInfoType] = useState<'story' | 'impact' | 'contact' | null>(null);
+  const [infoType, setInfoType] = useState<'impact' | 'contact' | null>(null);
 
   const handleOpenDonate = (cause?: string, amount: number = 5) => {
     setSelectedCause(cause);
@@ -28,6 +29,13 @@ export default function App() {
       el.scrollIntoView({ behavior: 'smooth' });
     } else {
       setInfoType('impact');
+    }
+  };
+
+  const scrollToStory = () => {
+    const el = document.getElementById('our-story-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -51,7 +59,7 @@ export default function App() {
         {/* Fixed / Top Navigation Bar */}
         <Navigation
           onOpenDonate={() => handleOpenDonate()}
-          onOpenStory={() => setInfoType('story')}
+          onOpenStory={scrollToStory}
           onOpenImpact={scrollToDoors}
           onOpenContact={() => setInfoType('contact')}
         />
@@ -68,6 +76,9 @@ export default function App() {
         {/* Bottom Strip (Label + USDT + QR Code + Scan-to-Donate) */}
         <BottomStrip onOpenDonateModal={() => handleOpenDonate()} />
       </div>
+
+      {/* SECTION 1.5: OUR STORY (قصتنا) */}
+      <OurStorySection />
 
       {/* SECTION 2: THREE DOORS OF HOPE (ثلاث أبواب للأمل) */}
       <ThreeDoorsSection
