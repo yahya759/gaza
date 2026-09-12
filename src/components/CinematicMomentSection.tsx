@@ -68,18 +68,18 @@ export const CinematicMomentSection: React.FC<CinematicMomentSectionProps> = ({
             src={schoolbagImg}
             alt="طفلان يلعبان بين الخيام في مخيم نزوح، طفولة سُرقت منها المدرسة"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-center filter contrast-135 brightness-75"
+            className="w-full h-full object-cover object-center filter contrast-110 brightness-95"
           />
 
-          {/* Duotone Palestinian Red tint overlay (#CE1126) */}
+          {/* Duotone Palestinian Red tint overlay (#CE1126) — lightened so the photo stays visible */}
           <div
-            className="absolute inset-0 pointer-events-none mix-blend-color opacity-70"
+            className="absolute inset-0 pointer-events-none mix-blend-color opacity-30"
             style={{ backgroundColor: '#CE1126' }}
           />
 
-          {/* Heavy Dark Vignette to direct focus to centered typography */}
+          {/* Dark Vignette to direct focus to centered typography — softened */}
           <div
-            className="absolute inset-0 pointer-events-none bg-radial from-black/40 via-black/85 to-black"
+            className="absolute inset-0 pointer-events-none bg-radial from-black/15 via-black/55 to-black/85"
           />
 
           {/* Additional edge fades for total seamless dark immersion */}
