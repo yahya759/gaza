@@ -57,14 +57,6 @@ export const Navigation: React.FC<NavigationProps> = ({
 
         {/* Left side in RTL (mirrored from right in reference): Text link + Black pill button */}
         <div className="flex items-center gap-3 sm:gap-5 shrink-0">
-          <button
-            type="button"
-            className="hidden sm:inline-block text-[13px] sm:text-[14px] font-medium text-[#333333] hover:text-[#CE1126] transition-colors cursor-pointer whitespace-nowrap"
-            onClick={() => alert('مرحباً بك! تسجيل الدخول متاح للمتبرعين والشركاء الداعمين.')}
-          >
-            تسجيل الدخول
-          </button>
-
           {/* Solid Black Pill Button */}
           <button
             type="button"
