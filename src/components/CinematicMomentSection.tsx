@@ -108,28 +108,28 @@ export const CinematicMomentSection: React.FC<CinematicMomentSectionProps> = ({
         {/* Pure Immersive Center Container: No nav, no clutter */}
         <div className="relative z-20 w-full max-w-4xl mx-auto px-4 sm:px-8 text-center flex flex-col items-center">
           
-          {/* Line 1 (small, gray): "هاي مو مجرد صورة." */}
+          {/* Line 1 (small, gray): "هاي مش مجرد صورة." */}
           <motion.p
             style={{ opacity: opacity1, y: y1 }}
             className="text-[14px] sm:text-[18px] md:text-[20px] text-[#999999] font-medium tracking-wide mb-2.5 sm:mb-4"
           >
-            هاي مو مجرد صورة.
+            هاي مش مجرد صورة.
           </motion.p>
 
-          {/* Line 2 (large, bold, white): "هاي طفل نسي شو طعم المدرسة." */}
+          {/* Line 2 (large, bold, white): "هاد أطفال فقدوا مدرستهم." */}
           <motion.h2
             style={{ opacity: opacity2, y: y2 }}
             className="font-['Cairo'] font-black text-[26px] sm:text-[46px] md:text-[60px] lg:text-[72px] text-white leading-[1.15] sm:leading-[1.12] tracking-tight max-w-3xl mx-auto mb-3 sm:mb-6"
           >
-            هاي طفل نسي شو طعم المدرسة.
+            هاد أطفال فقدوا مدرستهم.
           </motion.h2>
 
-          {/* Line 3 (small, red accent, appears last): "وانت تقدر ترجعله ياها." */}
+          {/* Line 3 (small, red accent, appears last): "وانت تقدر ترجعلهم ياها." */}
           <motion.p
             style={{ opacity: opacity3, y: y3 }}
             className="font-['Cairo'] font-bold text-[15px] sm:text-[22px] md:text-[26px] text-[#CE1126] tracking-wide mb-6 sm:mb-10"
           >
-            وانت تقدر ترجعله ياها.
+            وانت تقدر ترجعلهم ياها.
           </motion.p>
 
           {/* Single CTA: pill button, black bg / white text */}
@@ -142,7 +142,7 @@ export const CinematicMomentSection: React.FC<CinematicMomentSectionProps> = ({
               onClick={() => onOpenDonate('عودة أطفال غزة للمدارس', 5)}
               className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3 sm:py-4 rounded-full bg-[#111111] text-[#ffffff] text-[13px] sm:text-[16px] md:text-[17px] font-bold border border-white/20 shadow-2xl transition-all duration-300 hover:bg-[#CE1126] hover:border-[#CE1126] hover:shadow-[0_0_35px_rgba(206,17,38,0.4)] active:scale-95 cursor-pointer text-center"
             >
-              <span>كون سبب رجوعه للمدرسة — تبرع بـ 5$</span>
+              <span>كونوا سبب رجوعهم للمدرسة — تبرع بـ 5$</span>
               <ArrowUpLeft className="w-4 h-4 sm:w-5 sm:h-5 text-white transition-transform duration-300 group-hover:-translate-x-1 group-hover:-translate-y-1 shrink-0" />
             </button>
           </motion.div>
