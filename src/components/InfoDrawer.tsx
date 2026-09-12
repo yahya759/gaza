@@ -72,11 +72,8 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ type, onClose, onOpenDon
               تواصل معنا
             </h3>
             <p className="text-sm text-[#444444] leading-relaxed mb-4">
-              للتنسيق الإغاثي، الاستفسارات، أو إرسال إيصالات الدعم عبر العملات الرقمية:
+              للتنسيق الإغاثي والاستفسارات، تواصلوا معنا عبر منصات التواصل الخاصة بالمبادرة.
             </p>
-            <div className="p-3 bg-white rounded-xl border border-black/10 text-xs font-mono text-center text-[#222222] mb-3 select-all">
-              relief-gaza@humanitarian-aid.org
-            </div>
           </div>
         )}
 
