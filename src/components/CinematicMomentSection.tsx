@@ -54,7 +54,7 @@ export const CinematicMomentSection: React.FC<CinematicMomentSectionProps> = ({
     <section
       ref={containerRef}
       id="cinematic-moment-section"
-      className="relative w-full h-[180vh] bg-black text-white select-none"
+      className="relative w-full h-[130vh] bg-black text-white select-none"
     >
       {/* Sticky 100vh Full-Bleed Viewport */}
       <div className="sticky top-0 w-full h-screen overflow-hidden flex items-center justify-center">
