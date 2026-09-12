@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowUpLeft } from 'lucide-react';
-import schoolbagImg from '../assets/images/schoolbag_moment_duotone_1789192404343.jpg';
+import schoolbagImg from '../assets/images/children_playing_camp_1789220596928.jpg';
 
 interface CinematicMomentSectionProps {
   onOpenDonate: (cause: string, amount: number) => void;
@@ -66,7 +66,7 @@ export const CinematicMomentSection: React.FC<CinematicMomentSectionProps> = ({
         >
           <img
             src={schoolbagImg}
-            alt="حقيبة مدرسية لطفل غزاوي وحيدة بين الركام"
+            alt="طفلان يلعبان بين الخيام في مخيم نزوح، طفولة سُرقت منها المدرسة"
             referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center filter contrast-135 brightness-75"
           />
