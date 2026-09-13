@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Copy, Check, QrCode, ShieldCheck } from 'lucide-react';
+import usdtQrImg from '../assets/payment/usdt_trc20_qr.png';
 
 interface BottomStripProps {
   onOpenDonateModal: () => void;
@@ -7,7 +8,7 @@ interface BottomStripProps {
 
 export const BottomStrip: React.FC<BottomStripProps> = ({ onOpenDonateModal }) => {
   const [copied, setCopied] = useState(false);
-  const usdtAddress = "TF9y4K6YmQe72w1VqT3L8NxX7hK5p9Z4aR"; // Clean humanitarian TRC20 address
+  const usdtAddress = "TJ915j6tK2sVYWnLG95NU4ZSevBxqvw6xE"; // TRON (TRC-20) — real donation wallet
 
   const handleCopy = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -49,7 +50,7 @@ export const BottomStrip: React.FC<BottomStripProps> = ({ onOpenDonateModal }) =
                 USDT
               </span>
               <span className="text-[10px] sm:text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#111111]/5 text-[#333333]">
-                TRC-20 / ERC-20
+                TRC-20 (TRON)
               </span>
             </div>
             <p className="text-[10px] sm:text-[11px] text-[#666666]">بدون وسيط بنكي أو رسوم تحويل</p>
@@ -66,14 +67,12 @@ export const BottomStrip: React.FC<BottomStripProps> = ({ onOpenDonateModal }) =
           title="انقر لتكبير رمز الاستجابة السريعة والتبرع"
         >
           {/* Micro QR Code SVG with USDT icon */}
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-white p-1 border border-black/15 shadow-xs flex items-center justify-center group-hover:scale-105 group-hover:border-[#CE1126] transition-all shrink-0">
-            <svg viewBox="0 0 29 29" className="w-full h-full" shapeRendering="crispEdges">
-              <path fill="#111111" d="M0 0h7v7H0zM2 2h3v3H2zM22 0h7v7h-7zM24 2h3v3h-3zM0 22h7v7H0zM2 24h3v3H2zM9 1h2v2H9zM13 1h3v2h-3zM18 1h2v2h-2zM9 4h5v2H9zM16 4h3v2h-3zM9 7h2v2H9zM13 7h1v4h-1zM16 7h3v2h-3zM1 9h2v2H1zM4 9h2v4H4zM7 10h2v3H7zM19 10h2v2h-2zM24 9h4v2h-4zM24 12h2v3h-2zM1 14h2v2H1zM4 15h3v2H4zM10 14h2v3h-2zM14 13h3v2h-3zM18 13h2v4h-2zM21 14h2v2h-2zM26 15h2v3h-2zM9 18h2v2H9zM12 18h3v2h-3zM16 18h2v2h-2zM19 18h4v2h-4zM25 19h3v2h-3zM1 20h2v2H1zM4 18h2v3H4zM9 21h2v3H9zM13 22h2v2h-2zM17 21h3v2h-3zM21 21h2v4h-2zM24 22h4v2h-4zM9 25h3v2H9zM14 26h4v2h-4zM19 25h2v3h-2zM23 25h3v2h-3z" />
-            </svg>
-            {/* Center USDT dot icon */}
-            <div className="absolute inset-0 m-auto w-3 h-3 bg-[#009393] rounded-full flex items-center justify-center border border-white">
-              <span className="text-[7px] text-white font-bold leading-none">₮</span>
-            </div>
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-white p-1 border border-black/15 shadow-xs flex items-center justify-center group-hover:scale-105 group-hover:border-[#CE1126] transition-all shrink-0 overflow-hidden">
+            <img
+              src={usdtQrImg}
+              alt="رمز QR لعنوان محفظة USDT"
+              className="w-full h-full object-contain"
+            />
           </div>
 
           {/* Label: "امسح الكود وتبرع" */}
@@ -95,7 +94,7 @@ export const BottomStrip: React.FC<BottomStripProps> = ({ onOpenDonateModal }) =
           <div className="hidden lg:block text-right">
             <span className="text-[11px] text-[#777777] block">عنوان المحفظة المعتمد:</span>
             <span className="text-[12px] font-mono text-[#222222] font-semibold">
-              TF9y4K6Y...9Z4aR
+              TJ915j6t...vw6xE
             </span>
           </div>
           <button

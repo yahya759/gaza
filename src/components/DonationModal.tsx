@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, Copy, Check, QrCode, HeartHandshake, ShieldCheck, ExternalLink } from 'lucide-react';
+import usdtQrImg from '../assets/payment/usdt_trc20_qr.png';
 
 interface DonationModalProps {
   isOpen: boolean;
@@ -15,7 +16,6 @@ export const DonationModal: React.FC<DonationModalProps> = ({
   initialAmount = 5,
 }) => {
   const [selectedAmount, setSelectedAmount] = useState<number>(initialAmount);
-  const [selectedNetwork, setSelectedNetwork] = useState<'TRC20' | 'ERC20'>('TRC20');
   const [copied, setCopied] = useState(false);
 
   // Sync selectedAmount when initialAmount changes
@@ -27,13 +27,10 @@ export const DonationModal: React.FC<DonationModalProps> = ({
 
   if (!isOpen) return null;
 
-  const walletAddresses: Record<'TRC20' | 'ERC20', string> = {
-    TRC20: 'TF9y4K6YmQe72w1VqT3L8NxX7hK5p9Z4aR',
-    ERC20: '0x71C283457a1595166fD38F30928e1d51aE102f90',
-  };
+  const walletAddress = 'TJ915j6tK2sVYWnLG95NU4ZSevBxqvw6xE';
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(walletAddresses[selectedNetwork]);
+    navigator.clipboard.writeText(walletAddress);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -108,51 +105,29 @@ export const DonationModal: React.FC<DonationModalProps> = ({
           </div>
         </div>
 
-        {/* Network Selector */}
+        {/* Network Badge */}
         <div className="mb-4">
           <label className="block text-xs font-bold text-[#333333] mb-1.5">
-            شبكة الإيداع (USDT):
+            شبكة الإيداع:
           </label>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={() => setSelectedNetwork('TRC20')}
-              className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                selectedNetwork === 'TRC20'
-                  ? 'bg-[#26A17B] text-white shadow-xs'
-                  : 'bg-white border border-black/10 text-[#555555]'
-              }`}
-            >
-              USDT (TRC-20) • أقل رسوم
-            </button>
-            <button
-              type="button"
-              onClick={() => setSelectedNetwork('ERC20')}
-              className={`flex-1 py-1.5 px-3 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                selectedNetwork === 'ERC20'
-                  ? 'bg-[#26A17B] text-white shadow-xs'
-                  : 'bg-white border border-black/10 text-[#555555]'
-              }`}
-            >
-              USDT (ERC-20)
-            </button>
+          <div className="w-full py-1.5 px-3 rounded-lg text-xs font-semibold bg-[#26A17B] text-white shadow-xs text-center">
+            USDT (TRC-20 • شبكة TRON) • أقل رسوم
           </div>
         </div>
 
         {/* QR Code and Wallet Address Box */}
         <div className="bg-white rounded-2xl border border-black/10 p-4 flex flex-col items-center justify-center text-center shadow-xs mb-5">
-          {/* QR Code Graphic */}
-          <div className="relative w-40 h-40 bg-white p-2 rounded-xl border border-black/10 shadow-xs mb-3 flex items-center justify-center">
-            <svg viewBox="0 0 29 29" className="w-full h-full" shapeRendering="crispEdges">
-              <path fill="#111111" d="M0 0h7v7H0zM2 2h3v3H2zM22 0h7v7h-7zM24 2h3v3h-3zM0 22h7v7H0zM2 24h3v3H2zM9 1h2v2H9zM13 1h3v2h-3zM18 1h2v2h-2zM9 4h5v2H9zM16 4h3v2h-3zM9 7h2v2H9zM13 7h1v4h-1zM16 7h3v2h-3zM1 9h2v2H1zM4 9h2v4H4zM7 10h2v3H7zM19 10h2v2h-2zM24 9h4v2h-4zM24 12h2v3h-2zM1 14h2v2H1zM4 15h3v2H4zM10 14h2v3h-2zM14 13h3v2h-3zM18 13h2v4h-2zM21 14h2v2h-2zM26 15h2v3h-2zM9 18h2v2H9zM12 18h3v2h-3zM16 18h2v2h-2zM19 18h4v2h-4zM25 19h3v2h-3zM1 20h2v2H1zM4 18h2v3H4zM9 21h2v3H9zM13 22h2v2h-2zM17 21h3v2h-3zM21 21h2v4h-2zM24 22h4v2h-4zM9 25h3v2H9zM14 26h4v2h-4zM19 25h2v3h-2zM23 25h3v2h-3z" />
-            </svg>
-            <div className="absolute inset-0 m-auto w-8 h-8 bg-[#26A17B] rounded-full flex items-center justify-center border-2 border-white shadow-sm">
-              <span className="text-white font-bold text-xs">₮</span>
-            </div>
+          {/* Real QR Code */}
+          <div className="relative w-40 h-40 bg-white p-2 rounded-xl border border-black/10 shadow-xs mb-3 flex items-center justify-center overflow-hidden">
+            <img
+              src={usdtQrImg}
+              alt="رمز QR لعنوان محفظة USDT (شبكة TRON)"
+              className="w-full h-full object-contain"
+            />
           </div>
 
-          <p className="text-xs text-[#555555] mb-2 font-mono">
-            {walletAddresses[selectedNetwork]}
+          <p className="text-xs text-[#555555] mb-2 font-mono break-all px-2">
+            {walletAddress}
           </p>
 
           <button
@@ -168,7 +143,7 @@ export const DonationModal: React.FC<DonationModalProps> = ({
             ) : (
               <>
                 <Copy className="w-4 h-4" />
-                <span>نسخ عنوان محفظة التبرع ({selectedNetwork})</span>
+                <span>نسخ عنوان محفظة التبرع (USDT-TRC20)</span>
               </>
             )}
           </button>
