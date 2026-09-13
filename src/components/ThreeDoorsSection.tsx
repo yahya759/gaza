@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, KeyRound, Sparkles } from 'lucide-react';
 import doorOrphansImg from '../assets/images/door_orphans_1789275083753.jpg';
 import doorEducationImg from '../assets/images/door_education_1789275158195.jpg';
-import doorQuranImg from '../assets/images/door_quran_1789192250723.jpg';
+import doorQuranImg from '../assets/images/door_quran_1789275233245.jpg';
 
 interface DoorItem {
   id: string;
@@ -39,7 +39,7 @@ const DOORS: DoorItem[] = [
     tagline: 'كل آية يحفظوها نور ما بينطفي',
     stat: '+300 حافظ قرآن بحاجة رعاية',
     image: doorQuranImg,
-    alt: 'صفحات القرآن الكريم تشع نوراً وهداية',
+    alt: 'أطفال يجلسون بحلقة ويحملون المصحف الشريف في حصة تحفيظ',
     defaultAmount: 50,
   },
 ];
