@@ -5,6 +5,7 @@ import { RescueHandsIllustration } from './components/RescueHandsIllustration';
 import { BottomStrip } from './components/BottomStrip';
 import { HalftoneOverlay } from './components/HalftoneOverlay';
 import { OurStorySection } from './components/OurStorySection';
+import { JourneySection } from './components/JourneySection';
 import { ThreeDoorsSection } from './components/ThreeDoorsSection';
 import { CinematicMomentSection } from './components/CinematicMomentSection';
 import { LiveImpactSection } from './components/LiveImpactSection';
@@ -79,6 +80,9 @@ export default function App() {
 
       {/* SECTION 1.5: OUR STORY (قصتنا) */}
       <OurStorySection />
+
+      {/* SECTION 1.75: OUR JOURNEY (رحلتنا) */}
+      <JourneySection />
 
       {/* SECTION 2: THREE DOORS OF HOPE (ثلاث أبواب للأمل) */}
       <ThreeDoorsSection
