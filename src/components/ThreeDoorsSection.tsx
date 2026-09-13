@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, KeyRound, Sparkles } from 'lucide-react';
 import doorOrphansImg from '../assets/images/door_orphans_1789275083753.jpg';
-import doorEducationImg from '../assets/images/door_education_1789192238882.jpg';
+import doorEducationImg from '../assets/images/door_education_1789275158195.jpg';
 import doorQuranImg from '../assets/images/door_quran_1789192250723.jpg';
 
 interface DoorItem {
@@ -30,7 +30,7 @@ const DOORS: DoorItem[] = [
     tagline: 'قلم بيد طفل غزاوي أقوى من أي دمار',
     stat: '+1,200 طالب بلا كتاب ولا قلم',
     image: doorEducationImg,
-    alt: 'دفتر مفتوح وقلم يسطعان بنور الأمل والعلم',
+    alt: 'ثلاث طالبات مدرسة يذاكرن سوياً وسط ركام المباني المدمرة',
     defaultAmount: 15,
   },
   {
