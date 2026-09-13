@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ArrowLeft, KeyRound, Sparkles } from 'lucide-react';
-import doorOrphansImg from '../assets/images/door_orphans_1789192226295.jpg';
+import doorOrphansImg from '../assets/images/door_orphans_1789275083753.jpg';
 import doorEducationImg from '../assets/images/door_education_1789192238882.jpg';
 import doorQuranImg from '../assets/images/door_quran_1789192250723.jpg';
 
@@ -21,7 +21,7 @@ const DOORS: DoorItem[] = [
     tagline: 'كل يتيم يستاهل باب يفتحله حياة من جديد',
     stat: '+430 يتيم بانتظار كفيل',
     image: doorOrphansImg,
-    alt: 'طفل ممسك بيد شخص راعٍ في ضوء ذهبي دافئ',
+    alt: 'طفل يتيم واقف وحيد وسط بيت متواضع، نظرته تحمل رسالة صامتة',
     defaultAmount: 30,
   },
   {
