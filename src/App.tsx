@@ -16,7 +16,7 @@ export default function App() {
   const [isDonateOpen, setIsDonateOpen] = useState(false);
   const [selectedCause, setSelectedCause] = useState<string | undefined>(undefined);
   const [selectedAmount, setSelectedAmount] = useState<number>(5);
-  const [infoType, setInfoType] = useState<'impact' | 'contact' | null>(null);
+  const [infoType, setInfoType] = useState<'impact' | null>(null);
 
   const handleOpenDonate = (cause?: string, amount: number = 5) => {
     setSelectedCause(cause);
@@ -62,7 +62,6 @@ export default function App() {
           onOpenDonate={() => handleOpenDonate()}
           onOpenStory={scrollToStory}
           onOpenImpact={scrollToDoors}
-          onOpenContact={() => setInfoType('contact')}
         />
 
         {/* Hero Section Container */}

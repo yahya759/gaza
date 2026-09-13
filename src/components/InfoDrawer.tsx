@@ -1,8 +1,8 @@
 import React from 'react';
-import { X, Mail, Sparkles } from 'lucide-react';
+import { X, Sparkles } from 'lucide-react';
 
 interface InfoDrawerProps {
-  type: 'impact' | 'contact' | null;
+  type: 'impact' | null;
   onClose: () => void;
   onOpenDonate: () => void;
 }
@@ -46,20 +46,6 @@ export const InfoDrawer: React.FC<InfoDrawerProps> = ({ type, onClose, onOpenDon
                 <span className="font-bold text-[#CE1126]">50$</span>
               </div>
             </div>
-          </div>
-        )}
-
-        {type === 'contact' && (
-          <div>
-            <div className="w-10 h-10 rounded-full bg-[#111111]/10 text-[#111111] flex items-center justify-center mb-3">
-              <Mail className="w-5 h-5" />
-            </div>
-            <h3 className="font-['Cairo'] font-extrabold text-xl text-[#111111] mb-2">
-              تواصل معنا
-            </h3>
-            <p className="text-sm text-[#444444] leading-relaxed mb-4">
-              للتنسيق الإغاثي والاستفسارات، تواصلوا معنا عبر منصات التواصل الخاصة بالمبادرة.
-            </p>
           </div>
         )}
 

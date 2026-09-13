@@ -4,14 +4,12 @@ interface NavigationProps {
   onOpenDonate: () => void;
   onOpenStory?: () => void;
   onOpenImpact?: () => void;
-  onOpenContact?: () => void;
 }
 
 export const Navigation: React.FC<NavigationProps> = ({
   onOpenDonate,
   onOpenStory,
   onOpenImpact,
-  onOpenContact,
 }) => {
   return (
     <header className="w-full relative z-30 pt-4 sm:pt-6 pb-3 sm:pb-4 px-3 sm:px-6 md:px-10 lg:px-12 xl:px-16">
@@ -45,12 +43,6 @@ export const Navigation: React.FC<NavigationProps> = ({
               className="hover:text-[#CE1126] transition-colors cursor-pointer"
             >
               أثر تبرعك
-            </button>
-            <button
-              onClick={onOpenContact}
-              className="hover:text-[#CE1126] transition-colors cursor-pointer"
-            >
-              تواصل معنا
             </button>
           </nav>
         </div>
